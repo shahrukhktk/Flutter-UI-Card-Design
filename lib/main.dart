@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
 //        ),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50,
@@ -41,52 +42,43 @@ class MyApp extends StatelessWidget {
               ),
               SizedBox(
                 height: 30.0,
-              ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(15),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.red,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+92 313-0141046',
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        color: Colors.red,
-                      ),
-                    )
-                  ],
+                width: 200.0,
+                child: Divider(
+                  color: Colors.white,
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(15),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.red,
+                  ),
+                  title: Text(
+                    '+92 313-0141046',
+                    style: TextStyle(
+                      fontSize: 15.0,
+                      color: Colors.red,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                    leading: Icon(
                       Icons.email,
                       color: Colors.red,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
+                    title: Text(
                       'Shahrukhktk760@gmail.com',
                       style: TextStyle(
                         fontSize: 15.0,
                         color: Colors.red,
                       ),
-                    )
-                  ],
-                ),
+                    )),
               )
             ],
           ),
